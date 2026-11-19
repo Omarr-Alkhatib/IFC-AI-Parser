@@ -1,0 +1,17 @@
+# Python bytecode and caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local virtual environments
+venv/
+env/
+ENV/
+
+# BIM model files (large / sample data)
+*.ifc
+
+# Operating system junk files
+.DS_Store
+Thumbs.db
