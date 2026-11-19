@@ -20,6 +20,9 @@ A Python CLI and containerized automation tool that parses 3D Building Informati
 ├── Dockerfile          # Container build definition (Python slim image)
 ├── .gitignore          # Ignores cache, virtual environments, outputs, and .ifc files
 └── README.md           # Project documentation
+```
+
+---
 
 ## 🚀 Usage
 
@@ -29,11 +32,6 @@ A Python CLI and containerized automation tool that parses 3D Building Informati
 - [Ollama](https://ollama.com/) with a locally available model
 - Docker (for containerized execution)
 
-Pull the default model:
-
-```bash
-ollama pull llama3.2
-```
 
 ### 1. CLI Usage
 
@@ -96,7 +94,5 @@ docker run --rm `
   --model llama3.2 `
   --output /data/building_report.md
 ```
-
-The project directory is mounted to `/data` inside the container, allowing the application to access local IFC files and save generated reports directly to the host machine.
 
 **Note:** Ollama runs separately from the application container. By default, it listens on `localhost`, which is not directly accessible from inside Docker. Ollama's host binding and the application's connection configuration must be adjusted to allow communication between the container and the host.
